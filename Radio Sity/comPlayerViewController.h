@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 #import "comPlayer.h"
 
-@interface comPlayerViewController : UIViewController <comPlayerDelegate> {
-    BOOL isShowingLandscapeView;
-    NSString *nib;
+@interface comPlayerViewController : UIViewController <comPlayerDelegate,ADBannerViewDelegate> {
+//    BOOL isShowingLandscapeView;
+//    NSString *nib;
 }
 
 @property (retain, nonatomic) IBOutlet UILabel *skladba;
@@ -20,8 +21,8 @@
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *ani;
 
 -(IBAction)play:(id)sender;
--(IBAction)kontakt:(id)sender;
--(IBAction)facebook:(id)sender;
--(IBAction)web:(id)sender;
+//-(IBAction)kontakt:(id)sender;
+//-(IBAction)facebook:(id)sender;
+//-(IBAction)web:(id)sender;
 
 @end

@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 
 
-@interface comKontaktViewController : UIViewController {
-    BOOL isShowingLandscapeView;
+@interface comKontaktViewController : UIViewController<ADBannerViewDelegate> {
+//    BOOL isShowingLandscapeView;
 }
 
-+(NSString*)nameOfNib;
+//+(NSString*)nameOfNib;
 
--(IBAction)zpet:(id)sender;
+//-(IBAction)zpet:(id)sender;
 -(IBAction)zavolej:(id)sender;
 -(IBAction)SMS:(id)sender;
 -(IBAction)email:(id)sender;

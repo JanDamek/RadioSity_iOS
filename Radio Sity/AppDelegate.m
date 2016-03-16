@@ -19,17 +19,17 @@
     // Override point for customization after application launch.
     
     [comPlayer prepareBackgroundPlayAndSetDefaultSoundRoute];
-    player = [[comPlayer alloc]initWithURL:@"http://217.73.17.42:443/live.mp3"];
+    player = [[comPlayer alloc]initWithURL:@"http://www.radiosity.sk/sity96.m3u"];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    comPlayerViewController *p = [[comPlayerViewController alloc] init];
+//    comPlayerViewController *p = [[comPlayerViewController alloc] init];
     
-    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:p];
-    [nc.navigationBar setHidden:YES];    
+//    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:p];
+//    [nc.navigationBar setHidden:YES];
     
-    self.window.rootViewController = nc;
-    [self.window makeKeyAndVisible];
+//    self.window.rootViewController = nc;
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

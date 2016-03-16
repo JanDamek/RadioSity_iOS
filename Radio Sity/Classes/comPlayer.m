@@ -84,10 +84,10 @@ NSString *kPlayableKey		= @"playable";
 +(void)prepareBackgroundPlayAndSetDefaultSoundRoute
 {
     NSError *sessionError = nil;
-    [[AVAudioSession sharedInstance] setDelegate:self];
+//    [[AVAudioSession sharedInstance] setDelegate:self];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&sessionError];
-    UInt32 doChangeDefaultRoute = 1;
-    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+//    UInt32 doChangeDefaultRoute = 1;
+//    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
 }
 
 -(void)dealloc

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qZw-bO-TRP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tXm-bB-Nnl">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="qZw-bO-TRP" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jVT-CX-y2c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EwU-Sr-xRz" kind="relationship" relationship="rootViewController" id="pZv-Z9-abC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PGl-yI-5Ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="229"/>
+        </scene>
+        <!--Com Player View Controller-->
+        <scene sceneID="tB1-U3-WqY">
+            <objects>
+                <viewController id="EwU-Sr-xRz" customClass="comPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeZ-rT-vPs"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhd-49-QnR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h9g-Eq-UxL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="768x1024_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="HfP-OC-qcz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXQ-i8-rlB">
+                                <rect key="frame" x="20" y="520" width="60" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="1536x2048_icons_play.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="1536x2048_icons_play_press.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="EwU-Sr-xRz" eventType="touchUpInside" id="rNi-dW-fsp"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSU-DI-EfG">
+                                <rect key="frame" x="20" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0GS-Pf-Xy9"/>
+                                    <constraint firstAttribute="height" constant="60" id="hL4-14-3oA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="1536x2048_icons_pause.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="1536x2048_icons_pause_press.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="EwU-Sr-xRz" eventType="touchUpInside" id="X1D-s4-sbb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIu-f3-UMV">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5tJ-l3-CY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="1536x2048_icons_call.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="1536x2048_icons_call_press.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M1q-VM-NGq" kind="show" id="cU8-WU-MdH"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-L9-3cz">
+                                <rect key="frame" x="282" y="313" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt0-33-cUI">
+                                <rect key="frame" x="20" y="275" width="560" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="9TU-d5-7lr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HfP-OC-qcz" firstAttribute="leading" secondItem="h9g-Eq-UxL" secondAttribute="leading" id="70p-Jo-HKc"/>
+                            <constraint firstItem="HfP-OC-qcz" firstAttribute="centerX" secondItem="yt0-33-cUI" secondAttribute="centerX" id="DbE-eY-OyN"/>
+                            <constraint firstItem="nIu-f3-UMV" firstAttribute="trailing" secondItem="yt0-33-cUI" secondAttribute="trailing" id="G24-2k-KmT"/>
+                            <constraint firstAttribute="trailing" secondItem="HfP-OC-qcz" secondAttribute="trailing" id="Iqh-Op-uj9"/>
+                            <constraint firstItem="yt0-33-cUI" firstAttribute="top" secondItem="oeZ-rT-vPs" secondAttribute="bottom" constant="255" id="MfA-Vj-1f5"/>
+                            <constraint firstItem="CSU-DI-EfG" firstAttribute="leading" secondItem="h9g-Eq-UxL" secondAttribute="leadingMargin" id="PlZ-RA-HZ0"/>
+                            <constraint firstItem="wXQ-i8-rlB" firstAttribute="leading" secondItem="CSU-DI-EfG" secondAttribute="leading" id="QaT-Ao-jxX"/>
+                            <constraint firstItem="HfP-OC-qcz" firstAttribute="bottom" secondItem="yhd-49-QnR" secondAttribute="top" id="R93-b7-Lz0"/>
+                            <constraint firstItem="CSU-DI-EfG" firstAttribute="trailing" secondItem="wXQ-i8-rlB" secondAttribute="trailing" id="Uf2-YI-EGD"/>
+                            <constraint firstItem="nIu-f3-UMV" firstAttribute="bottom" secondItem="CSU-DI-EfG" secondAttribute="bottom" id="Ys9-b5-ta8"/>
+                            <constraint firstAttribute="bottom" secondItem="wXQ-i8-rlB" secondAttribute="bottom" constant="20" symbolic="YES" id="bID-nL-aYm"/>
+                            <constraint firstItem="yt0-33-cUI" firstAttribute="centerX" secondItem="dc6-L9-3cz" secondAttribute="centerX" id="cAE-K9-lsv"/>
+                            <constraint firstItem="nIu-f3-UMV" firstAttribute="top" secondItem="CSU-DI-EfG" secondAttribute="top" id="dbc-sD-gne"/>
+                            <constraint firstItem="CSU-DI-EfG" firstAttribute="top" secondItem="wXQ-i8-rlB" secondAttribute="top" id="lT6-TZ-vIX"/>
+                            <constraint firstItem="wXQ-i8-rlB" firstAttribute="bottom" secondItem="CSU-DI-EfG" secondAttribute="bottom" id="whg-yV-1j2"/>
+                            <constraint firstItem="yt0-33-cUI" firstAttribute="leading" secondItem="wXQ-i8-rlB" secondAttribute="leading" id="wu9-kG-FNg"/>
+                            <constraint firstItem="HfP-OC-qcz" firstAttribute="top" secondItem="oeZ-rT-vPs" secondAttribute="bottom" id="xeD-L3-YZH"/>
+                            <constraint firstItem="yhd-49-QnR" firstAttribute="top" secondItem="dc6-L9-3cz" secondAttribute="bottom" constant="250" id="xpj-RF-lSc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pj2-KD-pI7"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="ani" destination="dc6-L9-3cz" id="oNf-7K-div"/>
+                        <outlet property="playBtn" destination="wXQ-i8-rlB" id="LMW-Cl-k7c"/>
+                        <outlet property="skladba" destination="yt0-33-cUI" id="UI0-q5-FxQ"/>
+                        <outlet property="stopBtn" destination="CSU-DI-EfG" id="m9R-du-kud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5i-qj-wkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="229"/>
+        </scene>
+        <!--Kontakt radio SiTy-->
+        <scene sceneID="f9K-hw-c4d">
+            <objects>
+                <viewController id="M1q-VM-NGq" customClass="comKontaktViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WT2-Ru-BEk"/>
+                        <viewControllerLayoutGuide type="bottom" id="hPU-8P-bQU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fw8-nX-WkP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="768x1024_infopage.png" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-26-Guu">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYM-OZ-tDh">
+                                <rect key="frame" x="171" y="134" width="258" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="2xM-QR-Fo9"/>
+                                    <constraint firstAttribute="width" constant="258" id="JUb-0t-iyP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="640x960_contact_call.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="320x480_contact_call_press.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJF-ge-vh6">
+                                <rect key="frame" x="504" y="41" width="76" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Kmm-xe-PBm"/>
+                                    <constraint firstAttribute="width" constant="76" id="qJI-83-XW6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="640x960_icons_back.png"/>
+                                <connections>
+                                    <action selector="doBackButton:" destination="M1q-VM-NGq" eventType="touchUpInside" id="Qtv-BN-2wh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8a-J2-hvy">
+                                <rect key="frame" x="171" y="425" width="258" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="PNI-1n-Q0i"/>
+                                    <constraint firstAttribute="height" constant="59" id="hJV-B9-r9e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="640x960_contact_sms.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="640x960_contact_sms_press.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8sH-26-Guu" firstAttribute="centerX" secondItem="t8a-J2-hvy" secondAttribute="centerX" id="215-nh-IxE"/>
+                            <constraint firstItem="8sH-26-Guu" firstAttribute="leading" secondItem="Fw8-nX-WkP" secondAttribute="leading" id="4LL-Jt-BZ8"/>
+                            <constraint firstItem="8sH-26-Guu" firstAttribute="bottom" secondItem="hPU-8P-bQU" secondAttribute="top" id="4Rw-mZ-Sgx"/>
+                            <constraint firstItem="YJF-ge-vh6" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" constant="21" id="7gj-Wp-JSv"/>
+                            <constraint firstItem="t8a-J2-hvy" firstAttribute="leading" secondItem="dYM-OZ-tDh" secondAttribute="leading" id="Gz3-Rk-LaL"/>
+                            <constraint firstItem="dYM-OZ-tDh" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" constant="114" id="qgG-nx-fER"/>
+                            <constraint firstAttribute="trailing" secondItem="8sH-26-Guu" secondAttribute="trailing" id="rzS-EZ-pYv"/>
+                            <constraint firstItem="8sH-26-Guu" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" id="uMX-CF-KFO"/>
+                            <constraint firstItem="hPU-8P-bQU" firstAttribute="top" secondItem="t8a-J2-hvy" secondAttribute="bottom" constant="116" id="xvm-pY-w6Y"/>
+                            <constraint firstItem="YJF-ge-vh6" firstAttribute="trailing" secondItem="Fw8-nX-WkP" secondAttribute="trailingMargin" id="yrd-nW-GBC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kontakt radio SiTy" id="BLs-JZ-FmW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrY-WV-b6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="229"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1536x2048_icons_call.png" width="323" height="323"/>
+        <image name="1536x2048_icons_call_press.png" width="323" height="323"/>
+        <image name="1536x2048_icons_pause.png" width="323" height="323"/>
+        <image name="1536x2048_icons_pause_press.png" width="323" height="323"/>
+        <image name="1536x2048_icons_play.png" width="323" height="323"/>
+        <image name="1536x2048_icons_play_press.png" width="323" height="323"/>
+        <image name="320x480_contact_call_press.png" width="320" height="568"/>
+        <image name="640x960_contact_call.png" width="516" height="118"/>
+        <image name="640x960_contact_sms.png" width="516" height="117"/>
+        <image name="640x960_contact_sms_press.png" width="516" height="117"/>
+        <image name="640x960_icons_back.png" width="151" height="152"/>
+        <image name="768x1024_background.png" width="768" height="1024"/>
+        <image name="768x1024_infopage.png" width="768" height="1024"/>
+    </resources>
+</document>
