@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qZw-bO-TRP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qZw-bO-TRP">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -76,11 +76,11 @@
                                     <constraint firstAttribute="width" constant="60" id="5tJ-l3-CY6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="1536x2048_icons_call.png">
+                                <state key="normal" image="1536x2048_icons_call.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="1536x2048_icons_call_press.png">
+                                <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -99,6 +99,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YD-ae-Jl7" customClass="GADBannerView">
+                                <rect key="frame" x="280" y="462" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="U9p-BA-DNn"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wvd-ua-n9W"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,11 +114,13 @@
                             <constraint firstItem="HfP-OC-qcz" firstAttribute="centerX" secondItem="yt0-33-cUI" secondAttribute="centerX" id="DbE-eY-OyN"/>
                             <constraint firstItem="nIu-f3-UMV" firstAttribute="trailing" secondItem="yt0-33-cUI" secondAttribute="trailing" id="G24-2k-KmT"/>
                             <constraint firstAttribute="trailing" secondItem="HfP-OC-qcz" secondAttribute="trailing" id="Iqh-Op-uj9"/>
+                            <constraint firstItem="3YD-ae-Jl7" firstAttribute="trailing" secondItem="HfP-OC-qcz" secondAttribute="trailing" id="LhP-jI-XPe"/>
                             <constraint firstItem="yt0-33-cUI" firstAttribute="top" secondItem="oeZ-rT-vPs" secondAttribute="bottom" constant="255" id="MfA-Vj-1f5"/>
                             <constraint firstItem="CSU-DI-EfG" firstAttribute="leading" secondItem="h9g-Eq-UxL" secondAttribute="leadingMargin" id="PlZ-RA-HZ0"/>
                             <constraint firstItem="wXQ-i8-rlB" firstAttribute="leading" secondItem="CSU-DI-EfG" secondAttribute="leading" id="QaT-Ao-jxX"/>
                             <constraint firstItem="HfP-OC-qcz" firstAttribute="bottom" secondItem="yhd-49-QnR" secondAttribute="top" id="R93-b7-Lz0"/>
                             <constraint firstItem="CSU-DI-EfG" firstAttribute="trailing" secondItem="wXQ-i8-rlB" secondAttribute="trailing" id="Uf2-YI-EGD"/>
+                            <constraint firstItem="3YD-ae-Jl7" firstAttribute="top" secondItem="yt0-33-cUI" secondAttribute="bottom" constant="99" id="W94-7d-aAg"/>
                             <constraint firstItem="nIu-f3-UMV" firstAttribute="bottom" secondItem="CSU-DI-EfG" secondAttribute="bottom" id="Ys9-b5-ta8"/>
                             <constraint firstAttribute="bottom" secondItem="wXQ-i8-rlB" secondAttribute="bottom" constant="20" symbolic="YES" id="bID-nL-aYm"/>
                             <constraint firstItem="yt0-33-cUI" firstAttribute="centerX" secondItem="dc6-L9-3cz" secondAttribute="centerX" id="cAE-K9-lsv"/>
@@ -126,6 +136,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="ani" destination="dc6-L9-3cz" id="oNf-7K-div"/>
+                        <outlet property="bannerView" destination="3YD-ae-Jl7" id="rAb-pw-Azs"/>
                         <outlet property="playBtn" destination="wXQ-i8-rlB" id="LMW-Cl-k7c"/>
                         <outlet property="skladba" destination="yt0-33-cUI" id="UI0-q5-FxQ"/>
                         <outlet property="stopBtn" destination="CSU-DI-EfG" id="m9R-du-kud"/>
@@ -164,6 +175,9 @@
                                 <state key="highlighted" image="320x480_contact_call_press.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="zavolej:" destination="M1q-VM-NGq" eventType="touchUpInside" id="E2u-g8-eu7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJF-ge-vh6">
                                 <rect key="frame" x="504" y="41" width="76" height="76"/>
@@ -190,7 +204,18 @@
                                 <state key="highlighted" image="640x960_contact_sms_press.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SMS:" destination="M1q-VM-NGq" eventType="touchUpInside" id="mqM-50-fVS"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME1-kZ-3Ak" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="530" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HsT-tq-fmE"/>
+                                    <constraint firstAttribute="width" constant="320" id="Uif-Y3-0Dn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -198,7 +223,9 @@
                             <constraint firstItem="8sH-26-Guu" firstAttribute="leading" secondItem="Fw8-nX-WkP" secondAttribute="leading" id="4LL-Jt-BZ8"/>
                             <constraint firstItem="8sH-26-Guu" firstAttribute="bottom" secondItem="hPU-8P-bQU" secondAttribute="top" id="4Rw-mZ-Sgx"/>
                             <constraint firstItem="YJF-ge-vh6" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" constant="21" id="7gj-Wp-JSv"/>
+                            <constraint firstAttribute="bottom" secondItem="ME1-kZ-3Ak" secondAttribute="bottom" constant="20" symbolic="YES" id="E1p-zq-FGx"/>
                             <constraint firstItem="t8a-J2-hvy" firstAttribute="leading" secondItem="dYM-OZ-tDh" secondAttribute="leading" id="Gz3-Rk-LaL"/>
+                            <constraint firstItem="ME1-kZ-3Ak" firstAttribute="centerX" secondItem="t8a-J2-hvy" secondAttribute="centerX" id="ZWI-Bb-sDR"/>
                             <constraint firstItem="dYM-OZ-tDh" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" constant="114" id="qgG-nx-fER"/>
                             <constraint firstAttribute="trailing" secondItem="8sH-26-Guu" secondAttribute="trailing" id="rzS-EZ-pYv"/>
                             <constraint firstItem="8sH-26-Guu" firstAttribute="top" secondItem="WT2-Ru-BEk" secondAttribute="bottom" id="uMX-CF-KFO"/>
@@ -207,6 +234,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kontakt radio SiTy" id="BLs-JZ-FmW"/>
+                    <connections>
+                        <outlet property="bannerView" destination="ME1-kZ-3Ak" id="nhZ-Wc-f38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrY-WV-b6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,7 +245,6 @@
     </scenes>
     <resources>
         <image name="1536x2048_icons_call.png" width="323" height="323"/>
-        <image name="1536x2048_icons_call_press.png" width="323" height="323"/>
         <image name="1536x2048_icons_pause.png" width="323" height="323"/>
         <image name="1536x2048_icons_pause_press.png" width="323" height="323"/>
         <image name="1536x2048_icons_play.png" width="323" height="323"/>
